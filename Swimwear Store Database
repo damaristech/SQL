@@ -1,4 +1,4 @@
---First i created a store database
+--First I created a store database
 
 CREATE TABLE swimwear (id INTEGER PRIMARY KEY, name TEXT, price INTEGER, color TEXT, style TEXT, quantity INTEGER);
 
@@ -21,3 +21,15 @@ INSERT INTO swimwear VALUES (16, "natalie top", 16, "black", "two piece", 10);
 --Then I displayed the database ordered by price.
 
 SELECT * FROM swimwear ORDER BY price ASC;
+
+--Then I displayed the total sum of the inventory.
+
+SELECT SUM(quantity) FROM swimwear;
+
+--Then I displayed the max amount that there is of one item.
+
+SELECT MAX(quantity) FROM swimwear;
+
+--Lastly, I displayed the name and price of each item ordered by the price descending. 
+
+SELECT name, price FROM swimwear ORDER BY price DESC;
